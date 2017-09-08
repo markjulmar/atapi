@@ -1,0 +1,285 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Agent.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Agent.ico"
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST	"app.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AGENT_DIALOG DIALOGEX 0, 0, 314, 159
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "TAPI Agent Status © 1998-2004 JulMar Technology, Inc."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Monitored Agents:",IDC_STATIC,7,7,113,8
+    CONTROL         "List1",IDC_AGENTS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,7,18,300,114
+    PUSHBUTTON      "&Add ...",IDC_ADD,7,136,43,16
+    PUSHBUTTON      "&Remove",IDC_REMOVE,52,136,43,16,WS_DISABLED
+    PUSHBUTTON      "Set &State",IDC_SETAGENTSTATE,172,136,43,16,WS_DISABLED
+    PUSHBUTTON      "Set &Group",IDC_SETAGENTGROUP,218,136,43,16,WS_DISABLED
+    PUSHBUTTON      "Set Acti&vity",IDC_SETAGENTACTIVITY,264,136,43,16,
+                    WS_DISABLED
+END
+
+IDD_ADDAGENT DIALOG  0, 0, 236, 164
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Add Agents to the monitor list"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Select the addresses you would like to monitor for agent activity.",
+                    IDC_STATIC,7,7,222,11
+    LISTBOX         IDC_AGENTLIST,7,20,222,102,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Reload these choices at startup",IDC_RELOAD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,125,222,10
+    PUSHBUTTON      "&Add",IDOK,60,143,50,14,WS_DISABLED
+    PUSHBUTTON      "Close",IDCANCEL,126,143,50,14
+END
+
+IDD_SETAGENTGROUP DIALOG  0, 0, 188, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Set the Agent Group"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,36,130,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,102,130,50,14
+    COMBOBOX        IDC_AGENTS,7,18,172,80,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Agent:",IDC_STATIC,7,7,172,10
+    LISTBOX         IDC_GROUPLIST,7,60,172,65,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_GROUP,7,44,172,13,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Available Group(s):",IDC_STATIC,7,34,171,9
+END
+
+IDD_SETAGENTSTATE DIALOG  0, 0, 201, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Agent State"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,45,69,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,111,69,50,14
+    COMBOBOX        IDC_AGENTS,7,18,184,71,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Agent:",IDC_STATIC,7,7,26,10
+    COMBOBOX        IDC_STATE,7,44,88,69,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Curr State:",IDC_STATIC,7,33,36,10
+    COMBOBOX        IDC_NEXTSTATE,103,44,88,66,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Nxt State:",IDC_STATIC,103,33,33,10
+    LTEXT           "",IDC_CURRSTATE,45,33,55,10
+    LTEXT           "",IDC_CURRNEXTSTATE,139,33,55,10
+END
+
+IDD_AGENTSTATUS DIALOG  0, 0, 257, 154
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Agent Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,103,133,50,14
+    CTEXT           "Address/Line",IDC_ADDRESS,7,7,242,14,SS_NOPREFIX | 
+                    SS_CENTERIMAGE | SS_SUNKEN
+    LISTBOX         IDC_GROUPS,13,46,231,32,NOT LBS_NOTIFY | LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Agent Group Information",IDC_STATIC,7,34,243,53
+    LTEXT           "Curr State:",IDC_STATIC,14,23,35,10
+    LTEXT           "Nxt State:",IDC_STATIC,139,23,33,10
+    LTEXT           "",IDC_CURRSTATE,53,23,74,10
+    LTEXT           "",IDC_NEXTSTATE,174,23,74,10
+    GROUPBOX        "Agent Activity Information",IDC_STATIC,7,91,243,38
+    LTEXT           "Activity",IDC_ACTIVITY,13,102,231,20,SS_SUNKEN | 
+                    WS_BORDER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,3
+ PRODUCTVERSION 1,0,0,3
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "JulMar Technology, Inc."
+            VALUE "FileDescription", "Agent MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 3"
+            VALUE "InternalName", "Agent"
+            VALUE "LegalCopyright", "Copyright (C) 1998-2004 JulMar Entertainment Technology, Inc."
+            VALUE "OriginalFilename", "Agent.EXE"
+            VALUE "ProductName", "Agent Application"
+            VALUE "ProductVersion", "1, 0, 0, 3"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_AGENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_ADDAGENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_SETAGENTGROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_SETAGENTSTATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_AGENTSTATUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Agent.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

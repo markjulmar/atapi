@@ -1,0 +1,352 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Monitor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Monitor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "app.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Monitor...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F3,          ID_FILE_CLOSE,          VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 217, 60
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About TAPI Monitor"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,21,20
+    LTEXT           "Telephony Monitor Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 1997-2004 JulMar Technology, Inc.",
+                    IDC_STATIC,40,25,170,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,32,14,WS_GROUP
+    CTEXT           "http://www.julmar.com",IDC_STATIC,29,37,162,12
+END
+
+IDD_LINE_FORM DIALOG  0, 0, 293, 422
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_LINES,6,14,164,68,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Available Line Devices:",IDC_STATIC,6,5,154,8
+    LTEXT           "Provider Name:",IDC_STATIC,6,35,54,9
+    LTEXT           "Static",IDC_PROVIDERNAME,69,35,207,9
+    LTEXT           "Switch Info:",IDC_STATIC,6,43,54,9
+    LTEXT           "Static",IDC_SWITCHINFO,69,43,207,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,32,279,1
+    LTEXT           "Perm Line ID:",IDC_STATIC,6,57,46,9
+    LTEXT           "Static",IDC_PERM_LINEID,58,57,42,8
+    LTEXT           "String Format:",IDC_STATIC,6,65,46,9
+    LTEXT           "Static",IDC_STRINGFORMAT,58,65,42,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,54,279,1
+    LTEXT           "Max Rate:",IDC_STATIC,104,57,38,9
+    LTEXT           "Static",IDC_MAX_RATE,144,57,42,8
+    LTEXT           "Max Calls:",IDC_STATIC,104,65,38,9
+    LTEXT           "Static",IDC_MAX_CALLS,144,65,42,8
+    LTEXT           "Addresses:",IDC_STATIC,192,57,38,9
+    LTEXT           "Static",IDC_NUM_ADDRESSES,236,57,41,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,77,279,1
+    LTEXT           "Addr Modes:",IDC_STATIC,6,80,49,9
+    LTEXT           "Static",IDC_ADDRESSMODES,58,80,225,9
+    LTEXT           "Bearer Modes:",IDC_STATIC,6,88,49,9
+    LTEXT           "Static",IDC_BEARERMODES,58,88,225,9
+    LTEXT           "Ring Modes:",IDC_STATIC,192,101,41,8
+    LTEXT           "Static",IDC_RINGMODES,236,101,30,8
+    LTEXT           "Answer Md:",IDC_STATIC,192,65,38,9
+    LTEXT           "Static",IDC_ANSWERMODE,236,65,42,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,256,279,1
+    LTEXT           "Line State Notifications:",IDC_STATIC,6,136,97,9
+    LTEXT           "Static",IDC_LINESTATES,11,144,274,34
+    LTEXT           "Generate Tone Modes:",IDC_STATIC,6,267,83,8
+    LTEXT           "Static",IDC_GENTONE_MODES,96,267,124,8
+    LTEXT           "Generate Tone Max Frequency Count:",IDC_STATIC,6,259,
+                    132,9
+    LTEXT           "Static",IDC_GENTONE_MAX,144,259,42,8
+    LTEXT           "Generate Digit Modes:",IDC_STATIC,6,275,83,8
+    LTEXT           "Static",IDC_GENDIGIT_MODES,96,275,124,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,285,279,1
+    LTEXT           "Monitor Tone Max Entries:",IDC_STATIC,6,295,132,8
+    LTEXT           "Static",IDC_MONTONE_MAX_COUNT,144,295,42,8
+    LTEXT           "Monitor Tone Max Frequency Count:",IDC_STATIC,6,288,132,
+                    8
+    LTEXT           "Static",IDC_MONTONE_MAX_FREQ,144,288,42,8
+    LTEXT           "Monitor Digit Modes:",IDC_STATIC,6,303,83,8
+    LTEXT           "Static",IDC_MONDIGIT_MODES,96,303,189,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,313,277,1
+    LTEXT           "Gather Digits Min Timeout:",IDC_STATIC,6,316,88,8
+    LTEXT           "Static",IDC_GATHER_MIN_TIMEOUT,101,316,42,8
+    LTEXT           "Gather Digits Max Timeout:",IDC_STATIC,146,316,88,8
+    LTEXT           "Static",IDC_GATHER_MAX_TIMEOUT,242,316,42,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,326,277,1
+    LTEXT           "Media Ctl Digit Max Size:",IDC_STATIC,6,330,88,8
+    LTEXT           "Static",IDC_MEDIACTL_DIGIT_MAX_SIZE,101,330,42,8
+    LTEXT           "Media Ctl Media Max Size:",IDC_STATIC,146,330,88,8
+    LTEXT           "Static",IDC_MEDIACTL_MEDIA_MAX_SIZE,242,330,42,8
+    LTEXT           "Media Ctl Tone Max Size:",IDC_STATIC,6,338,88,8
+    LTEXT           "Static",IDC_MEDIACTL_TONE_MAX_SIZE,101,338,42,8
+    LTEXT           "Media Ctl CallState Max Size:",IDC_STATIC,146,338,96,8
+    LTEXT           "Static",IDC_MEDIACTL_CALLSTATE_MAX_SIZE,242,338,42,8
+    LTEXT           "Static",IDC_NEGTAPIVER,189,16,92,8
+    LTEXT           "Media Modes:",IDC_STATIC,6,101,49,8
+    LTEXT           "Static",IDC_MEDIAMODES,11,108,274,26
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,99,279,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,134,279,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,349,274,1
+    LTEXT           "User to User information",IDC_STATIC,6,350,79,8
+    LTEXT           "Accept:",IDC_STATIC,6,359,46,9
+    LTEXT           "Static",IDC_UUI_ACCEPT,58,359,42,8
+    LTEXT           "Answer:",IDC_STATIC,104,359,38,9
+    LTEXT           "Static",IDC_UUI_ANSWER,144,359,42,8
+    LTEXT           "MakeCall:",IDC_STATIC,192,359,38,9
+    LTEXT           "Static",IDC_UUI_MAKECALL,236,359,41,8
+    LTEXT           "DropCall:",IDC_STATIC,6,367,46,9
+    LTEXT           "Static",IDC_UUI_DROP,58,367,42,8
+    LTEXT           "SendInfo:",IDC_STATIC,104,367,38,9
+    LTEXT           "Static",IDC_UUI_SENDINFO,144,367,42,8
+    LTEXT           "CallInfo:",IDC_STATIC,192,367,38,9
+    LTEXT           "Static",IDC_UUI_CALLINFO,236,367,41,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,378,279,1
+    LTEXT           "Terminal Information:",IDC_STATIC,6,379,79,8
+    LISTBOX         IDC_TERMLIST,6,389,126,25,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Device Classes",IDC_STATIC,142,379,79,8
+    LISTBOX         IDC_DEVCLASS,142,389,143,25,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,183,275,1
+    LTEXT           "Device Capabilities:",IDC_STATIC,6,185,66,8
+    LTEXT           "Static",IDC_DEVICECAPSFLAGS,11,194,274,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,219,274,1
+    LTEXT           "Line Features:",IDC_STATIC,6,221,49,8
+    LTEXT           "Static",IDC_LINEFEATURES,11,230,274,23
+END
+
+IDD_ADDR_FORM DIALOG  0, 0, 293, 319
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_ADDRESS,6,14,164,68,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Available Addresses:",IDC_STATIC,6,5,154,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Windows Telephony Monitor"
+            VALUE "CompanyName", "JulMar Technology, Inc."
+            VALUE "FileDescription", "Monitor MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 2"
+            VALUE "InternalName", "TAPIMON"
+            VALUE "LegalCopyright", "Copyright (C) 1997-2004 JulMar Technology, Inc."
+            VALUE "OriginalFilename", "TAPIMON.EXE"
+            VALUE "ProductName", "Monitor Application"
+            VALUE "ProductVersion", "1, 0, 0, 2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_LINE_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 415
+    END
+
+    IDD_ADDR_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 312
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "TAPI Monitor\n\nMonito\n\n\nMonitor.Document\nMonito Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "TAPIMON"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Monitor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EnumTAPI", "Enumtapi.vcproj", "{D8377011-F6F2-4F91-B437-4630DE516763}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Unicode = Debug Unicode
+		DLL Debug = DLL Debug
+		DLL Release = DLL Release
+		Release = Release
+		Release Unicode = Release Unicode
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D8377011-F6F2-4F91-B437-4630DE516763}.Debug.ActiveCfg = Debug|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.Debug.Build.0 = Debug|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.Debug Unicode.ActiveCfg = Debug|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.Debug Unicode.Build.0 = Debug|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.DLL Debug.ActiveCfg = Debug|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.DLL Debug.Build.0 = Debug|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.DLL Release.ActiveCfg = Release|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.DLL Release.Build.0 = Release|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.Release.ActiveCfg = Release|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.Release.Build.0 = Release|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.Release Unicode.ActiveCfg = Release|Win32
+		{D8377011-F6F2-4F91-B437-4630DE516763}.Release Unicode.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

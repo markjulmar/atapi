@@ -1,0 +1,895 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "resource2.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""resource2.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Phone.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Phone.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "app.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 184, 82
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About Phone"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,6,6,20,20
+    LTEXT           "TAPI Phone Dialer 2.06",IDC_STATIC,45,15,119,8,
+                    SS_NOPREFIX
+    CTEXT           "Copyright (C) 2004 JulMar Technology, Inc.",IDC_STATIC,
+                    12,26,157,8,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "OK",IDOK,67,61,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYFRAME | SS_SUNKEN,7,7,170,
+                    48
+    CTEXT           "http:\\\\www.julmar.com",IDC_WEBLINK,12,37,157,8,
+                    SS_CENTERIMAGE
+END
+
+IDD_PHONE_DIALOG DIALOGEX 0, 0, 300, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_NOIDLEMSG | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "TAPI Phone Dialer © 2001-2004 JulMar Technology, Inc."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Session",IDC_STATIC,7,9,285,54,WS_GROUP
+    RTEXT           "Device:",IDC_STATIC,16,21,31,8
+    COMBOBOX        IDC_LINES,57,19,165,159,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Initiate Session",IDC_STARTSESSION,227,18,60,14,
+                    WS_DISABLED
+    PUSHBUTTON      "&Agent",IDC_AGENTINFO,227,32,30,14,WS_DISABLED
+    PUSHBUTTON      "P&hone",IDC_PHONEINFO,257,32,30,14,WS_DISABLED
+    CHECKBOX        "MWI",IDC_MESSAGEWAITING,59,48,30,10,WS_DISABLED
+    RTEXT           "Phone #:",IDC_STATIC,14,70,33,8
+    EDITTEXT        IDC_PHONENUMBER,53,68,89,12,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Ma&ke Call",IDC_MAKECALL,146,67,45,14,WS_DISABLED
+    PUSHBUTTON      "&Pickup...",IDC_PICKUP,193,67,45,14,WS_DISABLED
+    PUSHBUTTON      "&Unpark...",IDC_UNPARK,240,67,45,14,WS_DISABLED
+    GROUPBOX        "Calls",IDC_STATIC,8,84,285,156
+    LTEXT           "Max Calls:",IDC_STATIC,136,91,40,8
+    LTEXT           "0",IDC_MAXCALLS,178,91,20,8
+    CONTROL         "Spin1",IDC_CALLSPIN,"msctls_updown32",UDS_ARROWKEYS | 
+                    UDS_HORZ,229,91,23,8
+    LTEXT           "0 of 0",IDC_CALLNUM,257,91,28,9,SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,10,100,279,91,
+                    WS_EX_DLGMODALFRAME
+    RTEXT           "Call State:",IDC_STATIC,20,106,41,10
+    LTEXT           "",IDC_CALLSTATE,67,106,113,10
+    RTEXT           "CallType:",IDC_STATIC,20,116,41,10
+    LTEXT           "",IDC_CALLTYPE,67,116,59,10
+    RTEXT           "CallDirection:",IDC_STATIC,20,126,41,10
+    LTEXT           "",IDC_CALLDIRECTION,67,126,59,10
+    RTEXT           "Caller ID:",IDC_STATIC,20,136,41,10
+    LTEXT           "",IDC_CALLERNUM,68,136,120,10
+    RTEXT           "Called ID:",IDC_STATIC,20,146,41,10
+    LTEXT           "",IDC_CALLEDNUM,67,146,120,10
+    RTEXT           "Redirecting ID:",IDC_STATIC,13,166,48,10
+    LTEXT           "",IDC_REDIRECTNUM,67,166,120,10
+    RTEXT           "Host CallID:",IDC_STATIC,197,116,40,10
+    LTEXT           "0",IDC_CALLID,242,116,41,10
+    RTEXT           "Trunk ID:",IDC_STATIC,197,106,40,10
+    LTEXT           "0",IDC_TRUNK,242,106,41,10
+    RTEXT           "Media:",IDC_STATIC,128,116,22,10
+    LTEXT           "",IDC_MEDIAMODE,154,116,42,10
+    RTEXT           "Event Time:",IDC_STATIC,197,176,39,10
+    LTEXT           "00:00:00",IDC_STATECHGTIME,242,176,31,10
+    PUSHBUTTON      "U&ser Info",IDC_USERUSERINFO,239,140,45,14,WS_DISABLED
+    PUSHBUTTON      "Call &Data",IDC_CALLDATA,239,155,45,14,WS_DISABLED
+    LTEXT           "",IDC_STATUS,8,241,285,10,SS_SUNKEN
+    CONTROL         "Spin1",IDC_SESSIONSPIN,"msctls_updown32",UDS_ARROWKEYS | 
+                    UDS_HORZ,229,3,23,8
+    LTEXT           "0 of 0",IDC_SESSION,257,3,31,9,SS_NOPREFIX
+    CHECKBOX        "LCK",IDC_LOCKED,95,48,30,10,WS_DISABLED
+    RTEXT           "Address:",IDC_STATIC,15,34,31,8
+    COMBOBOX        IDC_ADDRESS,57,32,165,159,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "CON",IDC_CONNECTED,131,48,30,10,WS_DISABLED
+    CHECKBOX        "SVC",IDC_INSERVICE,167,48,30,10,WS_DISABLED
+    PUSHBUTTON      "Acc&ept",IDC_ACCEPT,13,193,45,14,WS_DISABLED
+    PUSHBUTTON      "A&nswer",IDC_ANSWER,59,193,45,14,WS_DISABLED
+    PUSHBUTTON      "Ho&ld",IDC_HOLD,104,193,45,14,WS_DISABLED
+    PUSHBUTTON      "&Swap",IDC_SWAPHOLD,150,193,45,14,WS_DISABLED
+    PUSHBUTTON      "Han&g Up",IDC_DROP,196,193,45,14,WS_DISABLED
+    PUSHBUTTON      "Dial D&igits...",IDC_DIAL,242,193,45,14,WS_DISABLED
+    PUSHBUTTON      "C&omplete...",IDC_COMPLETECALL,13,208,45,14,WS_DISABLED
+    PUSHBUTTON      "&Redirect...",IDC_REDIRECT,59,208,45,14,WS_DISABLED
+    PUSHBUTTON      "&Transfer...",IDC_TRANSFER,104,208,45,14,WS_DISABLED
+    PUSHBUTTON      "&Merge",IDC_COMPLETE,150,208,45,14,WS_DISABLED
+    PUSHBUTTON      "&Park...",IDC_PARK,196,208,45,14,WS_DISABLED
+    PUSHBUTTON      "Forward",IDC_FORWARD,242,208,45,14,WS_DISABLED
+    PUSHBUTTON      "Con&ference...",IDC_SETUPCONF,60,223,45,14,WS_DISABLED
+    PUSHBUTTON      "Add Party",IDC_ADDTOCONF,106,223,45,14,WS_DISABLED
+    PUSHBUTTON      "Drop Party",IDC_REMOVEFROMCONF,152,223,45,14,
+                    WS_DISABLED
+    PUSHBUTTON      "Conf &List...",IDC_CONFLIST,198,223,45,14,WS_DISABLED
+    RTEXT           "Connected ID:",IDC_STATIC,14,156,47,10
+    LTEXT           "",IDC_CONNECTEDNUM,68,156,120,10
+    PUSHBUTTON      "&Configure",IDC_CONFIG,227,46,60,14,WS_DISABLED
+    RTEXT           "Rel. CallID:",IDC_STATIC,197,126,40,10
+    LTEXT           "0",IDC_RELCALLID,242,126,41,10
+    RTEXT           "Redirection ID:",IDC_STATIC,13,176,48,10
+    LTEXT           "",IDC_REDIRECTNUM2,67,176,120,10
+    PUSHBUTTON      "QOS Info",IDC_QOS,192,140,45,14,WS_DISABLED
+    PUSHBUTTON      "ISDN Info",IDC_ISDNINFO,192,155,45,14,WS_DISABLED
+END
+
+IDD_CALLDATA DIALOG  0, 0, 361, 117
+STYLE DS_LOCALEDIT | DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Call Data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_CALLDATA,7,7,347,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Close",IDCANCEL,122,96,50,14
+    PUSHBUTTON      "SetCallData",IDOK,188,96,50,14,WS_DISABLED
+    EDITTEXT        IDC_HEXDATA,7,22,347,69,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+END
+
+IDD_UUI DIALOG  0, 0, 361, 121
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "User to User Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_CALLDATA,7,7,347,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Close",IDCANCEL,89,100,50,14
+    PUSHBUTTON      "ReleaseUUI",IDOK,155,100,50,14,WS_DISABLED
+    PUSHBUTTON      "Send UUI",IDC_SENDUUI,221,100,50,14,WS_DISABLED
+    EDITTEXT        IDC_HEXDATA,7,26,347,69,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+END
+
+IDD_DIAL DIALOG  0, 0, 225, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Instructions",IDC_INSTR,7,7,157,32
+    EDITTEXT        IDC_NUMBER,7,43,156,13,ES_UPPERCASE | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Dial",IDOK,168,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,168,24,50,14
+    PUSHBUTTON      "Translate",IDC_TRANSLATE,168,41,50,14
+END
+
+IDD_SETAGENTSTATE DIALOG  0, 0, 219, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Agent Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Group(s) or Agent ID:",IDC_STATIC,7,3,95,9
+    EDITTEXT        IDC_GROUP,7,13,145,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUP2,7,28,145,13,ES_AUTOHSCROLL
+    LISTBOX         IDC_GROUPLIST,7,43,145,34,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_DISABLED | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Set Group(s)",IDC_SETGROUP,156,13,56,13,WS_DISABLED
+    PUSHBUTTON      "&Ready",IDC_READY,156,30,56,13,WS_DISABLED
+    PUSHBUTTON      "Call &Work",IDC_WORKINGAFTERCALL,156,43,56,13,
+                    WS_DISABLED
+    PUSHBUTTON      "&Not Ready",IDC_NOTREADY,156,56,56,13,WS_DISABLED
+    PUSHBUTTON      "&Log Out",IDC_LOGOUT,156,69,56,13,WS_DISABLED
+    LTEXT           "Curr State:",IDC_STATIC,11,105,36,10
+    LTEXT           "",IDC_CURRSTATE,49,105,55,10
+    LTEXT           "Nxt State:",IDC_STATIC,110,105,33,10
+    LTEXT           "",IDC_CURRNEXTSTATE,145,105,55,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME | SS_SUNKEN,7,103,
+                    205,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,105,104,1,13
+    PUSHBUTTON      "&Update",IDC_UPDATE,156,87,56,13
+    COMBOBOX        IDC_ACTIVITY,7,87,145,36,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Agent Activity:",IDC_STATIC,7,78,95,8
+END
+
+IDD_CONFLIST DIALOG  0, 0, 238, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Conference List"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST,7,7,224,71,LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | LBS_NOSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_TRANSFER DIALOG  0, 0, 211, 93
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Transfer a Call"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,7,197,60
+    LTEXT           "Calling Number:",IDC_STATIC,11,12,51,8
+    LTEXT           "Name",IDC_CALLERNAME,66,12,132,8
+    LTEXT           "(800) 896-2677",IDC_CALLERNUM,66,22,132,8
+    LTEXT           "Number to Dial:",IDC_STATIC,11,36,50,10
+    EDITTEXT        IDC_NUMBER,66,35,132,13,ES_AUTOHSCROLL
+    CONTROL         "&Consultation Transfer",IDC_CONSXFER,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,66,52,102,10
+    DEFPUSHBUTTON   "OK",IDOK,48,72,50,14,WS_DISABLED | WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,114,72,50,14
+END
+
+IDD_COMPLETETRANS DIALOG  0, 0, 211, 129
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Complete a Consultation Transfer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,7,197,97
+    LTEXT           "Call # 1:",IDC_STATIC,11,12,51,8
+    LTEXT           "Name",IDC_CALLERNAME,67,22,132,8
+    LTEXT           "(800) 896-2677",IDC_CALLERNUM,67,32,132,8
+    LTEXT           "To:",IDC_STATIC,11,45,51,8
+    LTEXT           "Name",IDC_CALLEDNAME,67,54,132,8
+    LTEXT           "(800) 896-2677",IDC_CALLEDNUM,67,64,132,8
+    CONTROL         "&Create a Conference",IDC_CONFERENCE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,88,121,8
+    RTEXT           "00:00:00",IDC_ELAPSEDTIME,143,76,51,8
+    DEFPUSHBUTTON   "Transfer",IDOK,145,86,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,81,108,50,14
+    LTEXT           "Unknown",IDC_CALLSTATE1,67,12,132,8
+    LTEXT           "Unknown",IDC_CALLSTATE2,67,45,132,8
+END
+
+IDD_COMPLETECALL DIALOG  0, 0, 235, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Complete a Call"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Complete",IDOK,59,52,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,125,52,50,14
+    LTEXT           "Name",IDC_CALLERNAME,17,8,98,8
+    LTEXT           "(800) 896-2677",IDC_CALLERNUM,119,8,99,8
+    COMBOBOX        IDC_MODE,7,32,106,42,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Completion Mode:",IDC_STATIC,7,22,104,9
+    COMBOBOX        IDC_MESSAGEID,122,32,106,42,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Message Identifier:",IDC_STATIC,122,22,104,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,7,221,12
+END
+
+IDD_SETUPCONF DIALOG  0, 0, 211, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Setup a new Conference"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,7,197,63
+    LTEXT           "Starting Call:",IDC_STATIC,11,12,51,8
+    LTEXT           "Name",IDC_CALLERNAME,66,12,132,8
+    LTEXT           "(800) 896-2677",IDC_CALLERNUM,66,22,132,8
+    LTEXT           "Number to Dial:",IDC_STATIC,11,36,50,10
+    EDITTEXT        IDC_NUMBER,66,35,132,13,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "OK",IDOK,48,73,50,14,WS_DISABLED | WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,114,73,50,14
+    CONTROL         "&Merge existing calls into a conference",IDC_MERGE,
+                    "Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,15,
+                    54,135,10
+END
+
+IDD_PHONE DIALOGEX 0, 0, 274, 265
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Phone Features - "
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Display",IDC_STATIC,7,3,260,54
+    CTEXT           "0x0",IDC_DISPXY,232,11,32,9
+    PUSHBUTTON      "&Retrieve",IDC_GETDISPLAY,232,24,32,14,WS_GROUP
+    PUSHBUTTON      "&Set",IDC_SETDISPLAY,232,38,32,14
+    GROUPBOX        "Handset",IDC_STATIC,7,57,206,42
+    CONTROL         "Onhook",IDC_ONHOOK_HANDSET,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,15,68,48,12
+    CONTROL         "Microphone",IDC_MIC_HANDSET,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_TABSTOP,64,68,48,12
+    CONTROL         "Mic/Speaker",IDC_MICSPKR_HANDSET,"Button",
+                    BS_AUTORADIOBUTTON | BS_PUSHLIKE | WS_TABSTOP,15,81,48,
+                    12
+    CONTROL         "Speaker",IDC_SPKR_HANDSET,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_TABSTOP,64,81,48,12
+    LTEXT           "V:",IDC_STATIC,120,70,8,10
+    CONTROL         "Slider1",IDC_VOLUME_HANDSET,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,130,70,76,10
+    LTEXT           "G:",IDC_STATIC,120,81,8,10
+    CONTROL         "Slider1",IDC_GAIN_HANDSET,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,130,81,76,10
+    GROUPBOX        "Speakerphone",IDC_STATIC,7,99,206,42
+    EDITTEXT        IDC_DISPLAY,10,13,220,40,ES_MULTILINE | ES_READONLY | 
+                    ES_WANTRETURN | NOT WS_BORDER | WS_GROUP | NOT 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    CONTROL         "Onhook",IDC_ONHOOK_SPEAKER,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,15,109,48,12
+    CONTROL         "Microphone",IDC_MIC_SPEAKER,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_TABSTOP,64,109,48,12
+    CONTROL         "Mic/Speaker",IDC_MICSPKR_SPEAKER,"Button",
+                    BS_AUTORADIOBUTTON | BS_PUSHLIKE | WS_TABSTOP,15,122,48,
+                    12
+    CONTROL         "Speaker",IDC_SPKR_SPEAKER,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_TABSTOP,64,122,48,12
+    LTEXT           "V:",IDC_STATIC,120,111,8,10
+    CONTROL         "Slider1",IDC_VOLUME_SPEAKER,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,130,111,76,10
+    LTEXT           "G:",IDC_STATIC,120,122,8,10
+    CONTROL         "Slider1",IDC_GAIN_SPEAKER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,130,122,76,10
+    GROUPBOX        "Headset",IDC_STATIC,7,141,206,41
+    CONTROL         "Onhook",IDC_ONHOOK_HEADSET,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,15,151,48,12
+    CONTROL         "Microphone",IDC_MIC_HEADSET,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_TABSTOP,64,151,48,12
+    CONTROL         "Mic/Speaker",IDC_MICSPKR_HEADSET,"Button",
+                    BS_AUTORADIOBUTTON | BS_PUSHLIKE | WS_TABSTOP,15,164,48,
+                    12
+    CONTROL         "Speaker",IDC_SPKR_HEADSET,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_TABSTOP,64,164,48,12
+    LTEXT           "V:",IDC_STATIC,120,153,8,10
+    CONTROL         "Slider1",IDC_VOLUME_HEADSET,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,130,153,76,10
+    LTEXT           "G:",IDC_STATIC,120,164,8,10
+    CONTROL         "Slider1",IDC_GAIN_HEADSET,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,130,164,76,10
+    LTEXT           "Function:",IDC_STATIC,97,224,32,8
+    LTEXT           "Static",IDC_BUTTONFUNCTION,136,224,125,8
+    LTEXT           "Mode:",IDC_STATIC,97,234,32,8
+    LTEXT           "Static",IDC_BUTTONMODE,136,234,91,8
+    LTEXT           "Static",IDC_BUTTONTEXT,97,214,163,8
+    LISTBOX         IDC_BUTTONS,13,218,77,35,LBS_NOINTEGRALHEIGHT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Button Information",IDC_STATIC,7,207,260,51
+    GROUPBOX        "Misc.",IDC_STATIC,217,57,50,125
+    PUSHBUTTON      "&Config",IDC_CONFIGURE,221,161,41,14
+    CONTROL         "CONN",IDC_CONNECTED,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,223,68,38,9
+    LTEXT           "Lamp:",IDC_STATIC,97,244,32,8
+    LTEXT           "Static",IDC_LAMPMODE,135,244,91,8
+    GROUPBOX        "Ringer Information",IDC_STATIC,7,182,260,24
+    COMBOBOX        IDC_RINGMODES,12,190,140,68,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "V:",IDC_STATIC,161,192,8,10
+    CONTROL         "Slider1",IDC_VOLUME_RINGER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,171,192,89,10
+    CONTROL         "SUSP",IDC_SUSPENDED,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,223,79,38,9
+END
+
+IDD_PDIALER DIALOG  0, 0, 172, 164
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Predictive Dialer Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "The chosen line has predictive dialer capabilities which you may exploit. Select the parameters you would like to use for this call or press CANCEL to not send any.",
+                    IDC_STATIC,7,7,153,34
+    LTEXT           "Transfer To: (blank=none)",IDC_STATIC,7,44,82,9
+    EDITTEXT        IDC_NUMBER,7,54,86,13,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "Timeout in seconds:",IDC_STATIC,101,44,64,8
+    EDITTEXT        IDC_TIMEOUT,103,54,40,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,133,54,11,14
+    LTEXT           "Auto-Transfer States:",IDC_STATIC,7,73,67,8
+    LISTBOX         IDC_CALLSTATES,7,85,150,47,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,28,143,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,94,143,50,14
+END
+
+IDD_ISDNINFO DIALOG  0, 0, 373, 242
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "ISDN Information (Q.931)"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,161,221,50,14
+    EDITTEXT        IDC_HEXDATA,13,18,347,50,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    GROUPBOX        "Charging Information",IDC_STATIC,7,7,359,68
+    EDITTEXT        IDC_HEXDATA2,13,89,347,50,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    GROUPBOX        "Low level compatibility information",IDC_STATIC,7,78,
+                    359,68
+    EDITTEXT        IDC_HEXDATA3,13,161,347,50,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    GROUPBOX        "High level compatibility information",IDC_STATIC,7,150,
+                    359,68
+END
+
+IDD_QOS DIALOG  0, 0, 371, 194
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Call Quality of Service"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Sending FLOWSPEC information",IDC_STATIC,7,7,357,79
+    EDITTEXT        IDC_HEXDATA,12,18,347,60,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    GROUPBOX        "Receiving FLOWSPEC information",IDC_STATIC,7,88,357,79
+    EDITTEXT        IDC_HEXDATA4,12,100,347,59,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    PUSHBUTTON      "Close",IDCANCEL,127,173,50,14
+    PUSHBUTTON      "Set QOS",IDOK,193,173,50,14,WS_DISABLED
+END
+
+IDD_FORWARD DIALOG  0, 0, 205, 155
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Forward"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Address to forward:",IDC_STATIC,7,7,67,10
+    CONTROL         "Forward ALL",IDC_ALLADDR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,137,7,61,10
+    COMBOBOX        IDC_ADDRESSES,7,20,191,43,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Forward mode:",IDC_STATIC,7,39,191,10
+    COMBOBOX        IDC_FWDMODES,7,50,191,49,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "NoAnswer # rings:",IDC_STATIC,7,71,59,8
+    EDITTEXT        IDC_NUMRINGS,75,69,53,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,129,69,9,
+                    13
+    LTEXT           "Specific caller fwd:",IDC_STATIC,7,86,61,10
+    EDITTEXT        IDC_CALLER,75,84,123,13,ES_AUTOHSCROLL
+    LTEXT           "Fwd to:",IDC_STATIC,7,103,61,8
+    EDITTEXT        IDC_DEST,75,100,123,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,123,191,1
+    PUSHBUTTON      "Forward",IDOK,14,134,50,14,WS_DISABLED
+    PUSHBUTTON      "Unforward",IDC_UNFORWARD,77,134,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,140,134,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,6
+ PRODUCTVERSION 2,0,0,6
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Internal phone testing tool"
+            VALUE "CompanyName", "JulMar Technology, Inc."
+            VALUE "FileDescription", "Phone Dialer"
+            VALUE "FileVersion", "1, 0, 0, 6"
+            VALUE "InternalName", "PHONE.EXE"
+            VALUE "LegalCopyright", "Copyright (C) 2001-2004 JulMar Entertainment Technology, Inc."
+            VALUE "OriginalFilename", "Phone.EXE"
+            VALUE "ProductName", "Phone Application"
+            VALUE "ProductVersion", "2, 0, 0, 6"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_PHONE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_CALLDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 354
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_UUI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 354
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_DIAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_SETAGENTSTATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_CONFLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_TRANSFER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_COMPLETETRANS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_COMPLETECALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_SETUPCONF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_PHONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_PDIALER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_ISDNINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 366
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+
+    IDD_QOS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 364
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_FORWARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HYPERHAND           CURSOR                  "res\\hand.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Phone Dialer..."
+    IDS_DIAL                "Enter the dialable number you wish to target. Press the ""Translate"" button to invoke the current dialing plan on the number."
+    IDS_PARK                "Enter the extension to park the number to. If this is a non-directed park, leave it blank."
+    IDS_REDIRECT            "Enter the extension to redirect the call to."
+END
+
+STRINGTABLE 
+BEGIN
+    LINEERR_STR_ALLOCATED   "Line is allocated already."
+    LINEERR_STR_BADDEVICEID "Bad Device ID"
+    LINEERR_STR_BEARERMODEUNAVAIL "Bearer Mode Unknown"
+    LINEERR_STR_CALLUNAVAIL "No more calls can be made"
+    LINEERR_STR_COMPLETIONOVERRUN "Completion Overrun"
+    LINEERR_STR_CONFERENCEFULL "Conference is full"
+    LINEERR_STR_DIALBILLING "Dial billing not supported"
+    LINEERR_STR_DIALDIALTONE "No dialtone detected"
+    LINEERR_STR_DIALPROMPT  "Dial prompting not supported"
+    LINEERR_STR_DIALQUIET   "Dial cannot be suppressed"
+    LINEERR_STR_INCOMPATIBLEAPIVERSION "Incompatible API version"
+    LINEERR_STR_INCOMPATIBLEEXTVERSION "Incompatible EXT version"
+    LINEERR_STR_INIFILECORRUPT "TELEPHON.INI is corrupt"
+    LINEERR_STR_INUSE       "Line is in-use"
+END
+
+STRINGTABLE 
+BEGIN
+    LINEERR_STR_INVALADDRESS "Invalid Address"
+    LINEERR_STR_INVALADDRESSID "Invalid Address ID"
+    LINEERR_STR_INVALADDRESSMODE "Invalid Address Mode"
+    LINEERR_STR_INVALADDRESSSTATE "Invalid Address State"
+    LINEERR_STR_INVALAPPHANDLE "Invalid TAPI handle"
+    LINEERR_STR_INVALAPPNAME "Invalid Application Name"
+    LINEERR_STR_INVALBEARERMODE "Invalid Bearer Mode"
+    LINEERR_STR_INVALCALLCOMPLMODE "Invalid Call Completion Mode"
+    LINEERR_STR_INVALCALLHANDLE "Invalid Call handle"
+    LINEERR_STR_INVALCALLPARAMS "Invalid Call Parameters"
+    LINEERR_STR_INVALCALLPRIVILEGE "Invalid Call Privilege"
+    LINEERR_STR_INVALCALLSELECT "Invalid Call Select"
+    LINEERR_STR_INVALCALLSTATE "Call not in proper state"
+    LINEERR_STR_INVALCALLSTATELIST "Invalid call list"
+    LINEERR_STR_INVALCARD   "Invalid toll card"
+    LINEERR_STR_INVALCOMPLETIONID "Unknown completion ID"
+END
+
+STRINGTABLE 
+BEGIN
+    LINEERR_STR_INVALCONFCALLHANDLE "Conference not valid"
+    LINEERR_STR_INVALCONSULTCALLHANDLE "Consultation call not valid"
+    LINEERR_STR_INVALCOUNTRYCODE "Invalid Country code"
+    LINEERR_STR_INVALDEVICECLASS "Unknown device class"
+    LINEERR_STR_INVALDEVICEHANDLE "Invalid Device handle"
+    LINEERR_STR_INVALDIALPARAMS "Invalid Dialing parameters"
+    LINEERR_STR_INVALDIGITLIST "Invalid Digit list"
+    LINEERR_STR_INVALDIGITMODE "Invalid Digit mode"
+    LINEERR_STR_INVALDIGITS "Invalid digits"
+    LINEERR_STR_INVALEXTVERSION "Invalid Extended Version"
+    LINEERR_STR_INVALGROUPID "Invalid Group ID"
+    LINEERR_STR_INVALLINEHANDLE "Invalid Line Handle"
+    LINEERR_STR_INVALLINESTATE "Invalid Line State"
+    LINEERR_STR_INVALLOCATION "Invalid Location"
+    LINEERR_STR_INVALMEDIALIST "Invalid Media list"
+    LINEERR_STR_INVALMEDIAMODE "Invalid Media mode"
+END
+
+STRINGTABLE 
+BEGIN
+    LINEERR_STR_INVALMESSAGEID "Invalid Message ID"
+    LINEERR_STR_INVALPARAM  "Invalid Parameter"
+    LINEERR_STR_INVALPARKID "Invalid Park ID"
+    LINEERR_STR_INVALPARKMODE "Invalid Park Mode"
+    LINEERR_STR_INVALPOINTER "Invalid Pointer"
+    LINEERR_STR_INVALPRIVSELECT "Invalid Privilege"
+    LINEERR_STR_INVALRATE   "Invalid Rate"
+    LINEERR_STR_INVALREQUESTMODE "Invalid Request Mode"
+    LINEERR_STR_INVALTERMINALID "Invalid Terminal ID"
+    LINEERR_STR_INVALTERMINALMODE "Invalid Terminal Mode"
+    LINEERR_STR_INVALTIMEOUT "Invalid Timeout"
+    LINEERR_STR_INVALTONE   "Invalid Tone"
+    LINEERR_STR_INVALTONELIST "Invalid Tone List"
+    LINEERR_STR_INVALTONEMODE "Invalid Tone Mode"
+    LINEERR_STR_INVALTRANSFERMODE "Invalid Transfer mode"
+END
+
+STRINGTABLE 
+BEGIN
+    LINEERR_STR_LINEMAPPERFAILED "Line Mapper Failed"
+    LINEERR_STR_NOCONFERENCE "No conference available"
+    LINEERR_STR_NODEVICE    "Device not found"
+    LINEERR_STR_NODRIVER    "Driver not found"
+    LINEERR_STR_NOMEM       "Out of memory"
+    LINEERR_STR_NOREQUEST   "No request"
+    LINEERR_STR_NOTOWNER    "Access denied"
+    LINEERR_STR_NOTREGISTERED "Not registered"
+    LINEERR_STR_OPERATIONFAILED "Operation Failed"
+    LINEERR_STR_OPERATIONUNAVAIL "Operation Unavailable"
+    LINEERR_STR_RATEUNAVAIL "Rate Unavailable"
+    LINEERR_STR_RESOURCEUNAVAIL "Resource Unavailable"
+    LINEERR_STR_REQUESTOVERRUN "Request Overrun"
+    LINEERR_STR_STRUCTURETOOSMALL "Structure too small"
+    LINEERR_STR_TARGETNOTFOUND "Target not found"
+    LINEERR_STR_TARGETSELF  "Target number is self!"
+END
+
+STRINGTABLE 
+BEGIN
+    LINEERR_STR_UNINITIALIZED "Not initialized"
+    LINEERR_STR_USERUSERINFOTOOBIG "UUI too big"
+    LINEERR_STR_REINIT      "Re-init required"
+    LINEERR_STR_ADDRESSBLOCKED "Address is blocked"
+    LINEERR_STR_BILLINGREJECTED "Billing code rejected"
+    LINEERR_STR_INVALFEATURE "Invalid feature"
+    LINEERR_STR_NOMULTIPLEINSTANCE "Multiple instances not alloed"
+    LINEERR_STR_INVALAGENTID "Invalid Agent ID"
+    LINEERR_STR_INVALAGENTGROUP "Invalid Agent group"
+    LINEERR_STR_INVALPASSWORD "Invalid Password"
+    LINEERR_STR_INVALAGENTSTATE "Invalid Agent State"
+    LINEERR_STR_INVALAGENTACTIVITY "Invalid Agent Activity"
+    LINEERR_STR_DIALVOICEDETECT "Voice detected"
+END
+
+STRINGTABLE 
+BEGIN
+    PHONEERR_STR_ALLOCATED  "Phone is allocated already"
+    PHONEERR_STR_BADDEVICEID "Bad phone device id"
+    PHONEERR_STR_INCOMPATIBLEAPIVERSION "Incompatible API version"
+    PHONEERR_STR_INCOMPATIBLEEXTVERSION "Incompatible EXT version"
+    PHONEERR_STR_INIFILECORRUPT "TELEPHON.INI is corrupt"
+    PHONEERR_STR_INUSE      "Phone is in-use"
+    PHONEERR_STR_INVALAPPHANDLE "Invalid TAPI handle"
+    PHONEERR_STR_INVALAPPNAME "Invalid application name"
+    PHONEERR_STR_INVALBUTTONLAMPID "Invalid Button/Lamp ID"
+    PHONEERR_STR_INVALBUTTONMODE "Invalid Button mode"
+    PHONEERR_STR_INVALBUTTONSTATE "Invalid Button state"
+    PHONEERR_STR_INVALDATAID "Invalid phone buffer ID"
+    PHONEERR_STR_INVALDEVICECLASS "Invalid device class"
+    PHONEERR_STR_INVALEXTVERSION "Invalid Extension version"
+    PHONEERR_STR_INVALHOOKSWITCHDEV "Invalid Hookswitch device"
+END
+
+STRINGTABLE 
+BEGIN
+    PHONEERR_STR_INVALHOOKSWITCHMODE "Invalid Hookswitch mode"
+    PHONEERR_STR_INVALLAMPMODE "Invalid lamp mode"
+    PHONEERR_STR_INVALPARAM "Invalid parameter"
+    PHONEERR_STR_INVALPHONEHANDLE "Invalid phone handle"
+    PHONEERR_STR_INVALPHONESTATE "Invalid phone state"
+    PHONEERR_STR_INVALPOINTER "Invalid pointer"
+    PHONEERR_STR_INVALPRIVILEGE "Invalid phone privilege"
+    PHONEERR_STR_INVALRINGMODE "Invalid ringer mode"
+    PHONEERR_STR_NODEVICE   "Phone device does not exist"
+    PHONEERR_STR_NODRIVER   "TSP Driver missing components"
+    PHONEERR_STR_NOMEM      "Out of memory"
+    PHONEERR_STR_NOTOWNER   "Access denied"
+    PHONEERR_STR_OPERATIONFAILED "Operation Failed"
+    PHONEERR_STR_OPERATIONUNAVAIL "Operation Unavailable"
+    PHONEERR_STR_RESOURCEUNAVAIL "Resource Unavailable"
+END
+
+STRINGTABLE 
+BEGIN
+    PHONEERR_STR_REQUESTOVERRUN "Request list overrun"
+    PHONEERR_STR_STRUCTURETOOSMALL "Structure too small"
+    PHONEERR_STR_UNINITIALIZED "Phone not initialized"
+    PHONEERR_STR_REINIT     "TAPI must be reinitialized"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Phone.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
